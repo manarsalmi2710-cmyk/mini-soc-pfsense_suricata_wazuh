@@ -1,3 +1,1 @@
-alert tcp any any -> $HOME_NET 4444 (msg:"Possible Reverse Shell - Port 4444"; flags:S,CE; sid:1000001; rev:1;)
-alert tcp $HOME_NET any -> any any (msg:"Possible Bind Shell Activity"; flow:to_client,established; content:"/bin/bash"; sid:1000002; rev:1;)
-alert tcp any any -> $HOME_NET 22 (msg:"Possible SSH Brute Force"; flow:to_server; flags:S; threshold: type threshold, track by_src, count 5, seconds 60; sid:1000003; rev:1;)
+
